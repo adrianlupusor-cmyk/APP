@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reorganizarea Agenției Proprietății Publice · Expert-Grup</title>
+<meta name="description" content="O triere, două instituții, un singur obiectiv: un Holding de stat pentru administrarea corporativă și o APP fortificată pentru deetatizare. Infografic Expert-Grup, 2026.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reorganizarea Agenției Proprietății Publice">
+<meta property="og:description" content="De la constrângeri cronice de capacitate la o administrare corporativă performantă a proprietății statului. Infografic interactiv Expert-Grup.">
+<meta property="og:locale" content="ro_MD">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crimson:#BF1F3A;
+  --crimson-dark:#8F1729;
+  --crimson-deep:#6E101F;
+  --crimson-tint:#FBEDEF;
+  --ink:#201D1E;
+  --ink-soft:#3C3739;
+  --gray:#595556;
+  --gray-light:#8C8788;
+  --paper:#F6F3F3;
+  --paper-warm:#FAF7F6;
+  --line:#E5DDDE;
+  --line-strong:#D3CACB;
+  --white:#FFFFFF;
+  --serif:'Lora',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --maxw:1120px;
+  --shadow:0 1px 2px rgba(32,29,30,.04),0 8px 30px rgba(32,29,30,.06);
+  --shadow-lg:0 4px 12px rgba(32,29,30,.08),0 24px 60px rgba(32,29,30,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+
+/* ---------- Progress + Nav ---------- */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--crimson),var(--crimson-dark));z-index:200;transition:width .1s linear}
+nav{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;
+  padding:14px clamp(16px,4vw,40px);background:rgba(246,243,243,.82);backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s,padding .3s}
+nav.scrolled{border-color:var(--line);box-shadow:0 2px 18px rgba(32,29,30,.05)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.14em;font-size:13px;color:var(--ink);text-decoration:none;text-transform:uppercase}
+.brand .mark{width:26px;height:26px;border-radius:6px;background:var(--crimson);position:relative;flex:none;box-shadow:0 2px 8px rgba(191,31,58,.35)}
+.brand .mark::before{content:"";position:absolute;inset:7px 7px auto 7px;height:5px;background:#fff;border-radius:2px}
+.brand .mark::after{content:"";position:absolute;inset:auto 7px 7px 7px;height:5px;background:rgba(255,255,255,.55);border-radius:2px}
+.navlinks{display:flex;gap:6px;align-items:center}
+.navlinks a{font-size:13px;font-weight:600;color:var(--gray);text-decoration:none;padding:7px 12px;border-radius:7px;transition:color .2s,background .2s}
+.navlinks a:hover{color:var(--crimson);background:var(--crimson-tint)}
+.navlinks a.active{color:var(--crimson)}
+.menu-btn{display:none;background:none;border:1px solid var(--line-strong);border-radius:8px;padding:8px 10px;cursor:pointer;color:var(--ink)}
+@media(max-width:880px){.navlinks{display:none}.navlinks.open{display:flex;position:absolute;top:100%;right:14px;flex-direction:column;background:var(--white);
+  border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:var(--shadow-lg);min-width:220px}
+  .navlinks.open a{padding:11px 14px}.menu-btn{display:block}}
+
+/* ---------- Layout ---------- */
+section{padding:clamp(64px,9vw,120px) clamp(18px,5vw,40px);position:relative}
+.wrap{max-width:var(--maxw);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--crimson);margin-bottom:18px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--crimson)}
+h2.section-title{font-family:var(--serif);font-weight:600;font-size:clamp(27px,4.4vw,46px);line-height:1.12;letter-spacing:-.012em;max-width:20ch;margin-bottom:20px}
+.lead{font-size:clamp(16px,1.9vw,19px);color:var(--ink-soft);max-width:62ch;line-height:1.6}
+.kicker{font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gray-light)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}
+.reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.40s}.reveal.d6{transition-delay:.48s}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  background:radial-gradient(120% 90% at 85% 8%,#fff 0%,var(--paper) 42%,#efe9e9 100%);
+  padding-top:120px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-12%;right:-8%;width:46vw;height:46vw;max-width:640px;max-height:640px;
+  background:radial-gradient(circle at 50% 50%,rgba(191,31,58,.16),rgba(191,31,58,0) 68%);filter:blur(8px);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:46px 46px;opacity:.4;mask-image:radial-gradient(120% 80% at 50% 30%,#000 0%,transparent 75%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--line);border-radius:100px;
+  padding:8px 16px 8px 10px;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--ink-soft);box-shadow:var(--shadow);margin-bottom:30px}
+.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--crimson);box-shadow:0 0 0 4px var(--crimson-tint)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(38px,7.4vw,82px);line-height:1.02;letter-spacing:-.022em;margin-bottom:26px}
+.hero h1 .hl{color:var(--crimson);font-style:italic}
+.hero-sub{font-size:clamp(17px,2.2vw,22px);color:var(--ink-soft);max-width:60ch;line-height:1.5;margin-bottom:38px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;padding-top:30px;border-top:1px solid var(--line-strong);max-width:760px}
+.hero-meta .item{font-size:13.5px;color:var(--gray)}
+.hero-meta .item b{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-light);font-weight:700;margin-bottom:3px}
+.scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;color:var(--gray-light);font-size:11px;letter-spacing:.18em;text-transform:uppercase;z-index:2}
+.scroll-cue .mouse{width:22px;height:34px;border:2px solid var(--line-strong);border-radius:12px;position:relative}
+.scroll-cue .mouse::after{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);width:3px;height:7px;background:var(--crimson);border-radius:2px;animation:scrolldot 1.6s infinite}
+@keyframes scrolldot{0%{opacity:0;transform:translate(-50%,0)}40%{opacity:1}80%{opacity:0;transform:translate(-50%,9px)}}
+
+/* ---------- Cards / grids ---------- */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:var(--shadow);transition:transform .3s,box-shadow .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--line-strong)}
+
+/* ---------- Stat numbers ---------- */
+.statnum{font-family:var(--serif);font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--crimson);font-size:clamp(38px,6vw,60px)}
+.statnum .u{font-size:.42em;color:var(--ink);font-weight:600;letter-spacing:0}
+.statlabel{font-size:14px;color:var(--gray);margin-top:12px;line-height:1.45}
+.statband{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--ink);border-radius:18px;overflow:hidden}
+.statband .cell{padding:34px 28px;border-right:1px solid rgba(255,255,255,.09)}
+.statband .cell:last-child{border-right:none}
+.statband .statnum{color:#fff}
+.statband .statnum .u{color:rgba(255,255,255,.62)}
+.statband .statlabel{color:rgba(255,255,255,.66)}
+@media(max-width:760px){.statband{grid-template-columns:1fr}.statband .cell{border-right:none;border-bottom:1px solid rgba(255,255,255,.09)}}
+
+/* ---------- Timeline (context) ---------- */
+.timeline{position:relative;margin-top:48px;padding-left:4px}
+.tl-track{position:absolute;left:0;top:14px;bottom:14px;width:2px;background:var(--line-strong)}
+.tl-item{position:relative;padding:0 0 30px 40px}
+.tl-item:last-child{padding-bottom:0}
+.tl-item .yr{position:absolute;left:-9px;top:0;width:22px;height:22px;border-radius:50%;background:var(--white);border:2px solid var(--crimson);display:flex;align-items:center;justify-content:center}
+.tl-item .yr::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--crimson);transition:transform .3s}
+.tl-item:hover .yr::after{transform:scale(1.5)}
+.tl-item .y{font-family:var(--serif);font-weight:700;font-size:20px;color:var(--ink);margin-bottom:2px}
+.tl-item.accent .y{color:var(--crimson)}
+.tl-item .t{font-size:15px;color:var(--ink-soft)}
+
+/* ---------- Two-column compare ---------- */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+@media(max-width:760px){.compare{grid-template-columns:1fr}}
+.compare .col{border-radius:16px;padding:28px}
+.compare .col.ask{background:var(--white);border:1px solid var(--line)}
+.compare .col.limit{background:var(--crimson-tint);border:1px solid #f1d6db}
+.compare h4{font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+.compare .ask h4{color:var(--ink)}.compare .limit h4{color:var(--crimson-dark)}
+.compare ul{list-style:none}
+.compare li{position:relative;padding:11px 0 11px 28px;font-size:15px;color:var(--ink-soft);border-top:1px solid rgba(0,0,0,.06)}
+.compare li:first-child{border-top:none}
+.compare .ask li::before{content:"";position:absolute;left:0;top:18px;width:14px;height:2px;background:var(--gray-light)}
+.compare .limit li::before{content:"";position:absolute;left:2px;top:14px;width:9px;height:9px;border:2px solid var(--crimson);border-radius:50%}
+
+/* ---------- Diagnostic cards (expandable) ---------- */
+.diag-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;margin-bottom:14px}
+.toggle-all{background:var(--white);border:1px solid var(--line-strong);border-radius:100px;padding:9px 18px;font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;transition:all .2s}
+.toggle-all:hover{border-color:var(--crimson);color:var(--crimson)}
+.diag-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:760px){.diag-grid{grid-template-columns:1fr}}
+.diag{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .3s,box-shadow .3s}
+.diag.open{border-color:var(--crimson);box-shadow:var(--shadow-lg)}
+.diag-btn{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:22px 24px;display:flex;gap:18px;align-items:flex-start;font-family:inherit}
+.diag-no{font-family:var(--serif);font-weight:700;font-size:22px;color:var(--crimson);flex:none;width:30px;line-height:1.2}
+.diag-main{flex:1}
+.diag-cat{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--gray-light);font-weight:700;margin-bottom:5px}
+.diag-title{font-size:16.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.diag-chev{flex:none;width:26px;height:26px;border-radius:50%;background:var(--paper);display:flex;align-items:center;justify-content:center;transition:transform .35s,background .3s;margin-top:2px}
+.diag.open .diag-chev{transform:rotate(180deg);background:var(--crimson-tint)}
+.diag-chev svg{width:13px;height:13px;stroke:var(--crimson);fill:none;stroke-width:2.4}
+.diag-body{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1)}
+.diag-body-inner{padding:0 24px 24px 72px}
+.diag-desc{font-size:14.5px;color:var(--ink-soft);margin-bottom:16px}
+.diag-points{list-style:none;margin-bottom:18px}
+.diag-points li{position:relative;padding:7px 0 7px 20px;font-size:14px;color:var(--gray)}
+.diag-points li b{color:var(--ink)}
+.diag-points li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:2px;background:var(--crimson)}
+.diag-impl{background:var(--crimson-tint);border-left:3px solid var(--crimson);border-radius:0 10px 10px 0;padding:14px 18px}
+.diag-impl .lbl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--crimson-dark);margin-bottom:5px}
+.diag-impl p{font-size:14px;color:var(--ink-soft);font-style:italic}
+.diag-metric{display:inline-block;font-family:var(--serif);font-weight:700;color:var(--crimson);font-size:15px;margin-bottom:12px;background:var(--crimson-tint);padding:3px 10px;border-radius:7px}
+
+/* ---------- Charts ---------- */
+.chart-card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:var(--shadow)}
+.chart-card h4{font-size:16px;font-weight:700;margin-bottom:4px}
+.chart-card .sub{font-size:13px;color:var(--gray);margin-bottom:22px}
+/* simple positive bar chart */
+.barchart{display:flex;align-items:flex-end;gap:clamp(16px,5vw,46px);height:244px;padding:36px 6px 0}
+.barchart .col{flex:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.barchart .bar{position:relative;width:100%;max-width:88px;height:0;background:linear-gradient(180deg,var(--crimson),var(--crimson-dark));border-radius:8px 8px 0 0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.barchart .bar .v{position:absolute;left:-10px;right:-10px;top:-30px;text-align:center;font-family:var(--serif);font-weight:700;font-size:clamp(16px,2.4vw,21px);color:var(--ink);white-space:nowrap}
+.barchart .lab{margin-top:13px;font-size:13px;font-weight:600;color:var(--gray)}
+/* diverging chart (around zero) */
+.dchart{display:flex;gap:clamp(16px,5vw,46px);padding:6px 6px 0;position:relative}
+.dchart .zeroline{position:absolute;left:6px;right:6px;top:80px;height:1px;background:var(--line-strong);z-index:1}
+.dchart .zeroline span{position:absolute;left:0;top:-8px;font-size:11px;color:var(--gray-light);background:var(--white);padding-right:6px}
+.dchart .col{flex:1;display:flex;flex-direction:column;align-items:center;min-width:0}
+.dchart .pos{height:74px;width:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.dchart .neg{height:150px;width:100%;display:flex;flex-direction:column;justify-content:flex-start;align-items:center}
+.dchart .bar{width:100%;max-width:78px;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+.dchart .bar.up{background:linear-gradient(180deg,#3a8068,#27604f);border-radius:7px 7px 0 0}
+.dchart .bar.down{background:linear-gradient(180deg,var(--crimson),var(--crimson-dark));border-radius:0 0 7px 7px}
+.dchart .v{font-family:var(--serif);font-weight:700;font-size:16px;margin:5px 0;white-space:nowrap}
+.dchart .v.up{color:#27604f}.dchart .v.down{color:var(--crimson)}
+.dchart .lab{margin-top:11px;font-size:13px;font-weight:600;color:var(--gray)}
+
+/* split / concentration */
+.splitbar{display:flex;height:54px;border-radius:12px;overflow:hidden;margin:8px 0 16px}
+.splitbar .seg{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:15px;transition:flex .9s cubic-bezier(.2,.8,.2,1);min-width:0;overflow:hidden}
+.splitbar .seg.profit{background:linear-gradient(135deg,#2f6f5b,#27604f);flex:0}
+.splitbar .seg.loss{background:linear-gradient(135deg,var(--crimson),var(--crimson-dark));flex:0}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13.5px;color:var(--gray)}
+.legend .li{display:flex;align-items:center;gap:8px}
+.legend .sw{width:13px;height:13px;border-radius:4px}
+.conc{margin-top:8px}
+.conc-row{margin-bottom:20px}
+.conc-row .top{display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px}
+.conc-row .top b{font-family:var(--serif);color:var(--crimson);font-size:17px}
+.conc-track{height:14px;background:var(--paper);border-radius:8px;overflow:hidden}
+.conc-fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--crimson),var(--crimson-dark));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+
+/* ---------- Vision split diagram ---------- */
+.triage{margin-top:20px}
+.triage-top{display:flex;justify-content:center;margin-bottom:8px}
+.triage-pill{background:var(--ink);color:#fff;border-radius:14px;padding:20px 30px;text-align:center;max-width:520px;box-shadow:var(--shadow-lg)}
+.triage-pill .t{font-family:var(--serif);font-size:19px;font-weight:600;margin-bottom:4px}
+.triage-pill .s{font-size:13.5px;color:rgba(255,255,255,.7)}
+.triage-split{display:flex;justify-content:center;gap:90px;margin:4px 0;position:relative;height:46px}
+.triage-split::before{content:"";position:absolute;top:0;left:50%;width:2px;height:18px;background:var(--line-strong);transform:translateX(-50%)}
+.triage-split .branch{position:absolute;top:18px;width:2px;height:28px;background:var(--line-strong)}
+.triage-split .branch.l{left:25%}.triage-split .branch.r{left:75%}
+.triage-split .hbar{position:absolute;top:18px;left:25%;width:50%;height:2px;background:var(--line-strong)}
+.two-inst{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.two-inst{grid-template-columns:1fr}.triage-split{gap:10px}}
+.inst{border-radius:18px;padding:30px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+.inst:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.inst.holding{background:linear-gradient(165deg,#2a2526,var(--ink));color:#fff}
+.inst.app{background:var(--white);border:1px solid var(--line-strong);color:var(--ink)}
+.inst .grp{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+.inst.holding .grp{color:#f0a8b3}.inst.app .grp{color:var(--crimson)}
+.inst .nm{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:18px;line-height:1.15}
+.inst .blk{margin-bottom:16px}
+.inst .blk .h{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:6px;opacity:.7}
+.inst .blk p{font-size:14.5px;line-height:1.5}
+.inst.holding .blk p{color:rgba(255,255,255,.86)}
+.inst.app .blk p{color:var(--ink-soft)}
+.inst .badge{position:absolute;top:24px;right:26px;font-family:var(--serif);font-weight:700;font-size:40px;opacity:.16}
+
+/* ---------- Holding model ---------- */
+.model{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:8px}
+@media(max-width:860px){.model{grid-template-columns:1fr}}
+.spec-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+@media(max-width:480px){.spec-list{grid-template-columns:1fr}}
+.spec{background:var(--white);padding:20px 22px}
+.spec .h{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-light);font-weight:700;margin-bottom:7px}
+.spec .v{font-size:15px;color:var(--ink);font-weight:500;line-height:1.4}
+.spec .v b{color:var(--crimson);font-family:var(--serif)}
+.finbox{background:var(--ink);border-radius:16px;padding:28px;color:#fff}
+.finbox .h{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);font-weight:700;margin-bottom:18px}
+.formula{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.formula .term{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:11px;padding:11px 14px;text-align:center;flex:1;min-width:84px}
+.formula .term .p{font-family:var(--serif);font-weight:700;font-size:20px;color:#fff}
+.formula .term .l{font-size:11px;color:rgba(255,255,255,.62);margin-top:3px;line-height:1.3}
+.formula .op{font-size:20px;color:var(--crimson);font-weight:700}
+.vs{display:flex;gap:14px}
+.vs .vbox{flex:1;background:rgba(255,255,255,.05);border-radius:12px;padding:16px;text-align:center}
+.vs .vbox.in{border:1px solid rgba(95,180,140,.35)}
+.vs .vbox .n{font-family:var(--serif);font-weight:700;font-size:22px}
+.vs .vbox.in .n{color:#74c79f}.vs .vbox.out .n{color:#f0a8b3}
+.vs .vbox .l{font-size:11.5px;color:rgba(255,255,255,.62);margin-top:4px}
+
+/* ---------- Roadmap ---------- */
+.road{display:grid;grid-template-columns:repeat(6,1fr);gap:0;margin-top:20px;counter-reset:rd}
+@media(max-width:900px){.road{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.road{grid-template-columns:1fr}}
+.rd{position:relative;padding:0 16px}
+.rd .top{display:flex;align-items:center;margin-bottom:18px;position:relative}
+.rd .n{width:40px;height:40px;border-radius:50%;background:var(--white);border:2px solid var(--crimson);color:var(--crimson);
+  font-family:var(--serif);font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;flex:none;z-index:2;transition:background .3s,color .3s}
+.rd:hover .n{background:var(--crimson);color:#fff}
+.rd .line{flex:1;height:2px;background:var(--line-strong)}
+.rd:last-child .line{display:none}
+@media(max-width:900px){.rd{margin-bottom:26px}.rd .line{display:none}}
+.rd .h{font-size:15px;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.rd .d{font-size:13.5px;color:var(--gray);line-height:1.5}
+
+/* ---------- Debate questions ---------- */
+.qgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+@media(max-width:680px){.qgrid{grid-template-columns:1fr}}
+.q{display:flex;gap:18px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px;transition:border-color .3s,transform .3s}
+.q:hover{border-color:var(--crimson);transform:translateX(4px)}
+.q .qn{font-family:var(--serif);font-weight:700;font-size:26px;color:var(--crimson);flex:none;line-height:1}
+.q .qt{font-size:15px;color:var(--ink-soft);line-height:1.5}
+.q .qt b{color:var(--ink)}
+
+/* ---------- Pull quote ---------- */
+.pullquote{background:var(--ink);color:#fff;border-radius:22px;padding:clamp(36px,6vw,64px);text-align:center;position:relative;overflow:hidden}
+.pullquote::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(circle at 50% 50%,#000,transparent 72%)}
+.pullquote .mark{font-family:var(--serif);font-size:90px;line-height:.5;color:var(--crimson);position:relative;height:40px}
+.pullquote p{font-family:var(--serif);font-size:clamp(21px,3.3vw,32px);font-weight:500;line-height:1.34;max-width:24ch;margin:0 auto;position:relative;letter-spacing:-.01em}
+.pullquote .src{margin-top:24px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55);position:relative}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#fff;padding:clamp(56px,8vw,90px) clamp(18px,5vw,40px) 40px}
+.foot-grid{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12)}
+@media(max-width:680px){.foot-grid{grid-template-columns:1fr;gap:28px}}
+.foot-brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:15px;margin-bottom:18px}
+.foot-brand .mark{width:30px;height:30px;border-radius:7px;background:var(--crimson);position:relative;flex:none}
+.foot-brand .mark::before{content:"";position:absolute;inset:8px 8px auto 8px;height:5px;background:#fff;border-radius:2px}
+.foot-brand .mark::after{content:"";position:absolute;inset:auto 8px 8px 8px;height:5px;background:rgba(255,255,255,.55);border-radius:2px}
+footer p.fp{color:rgba(255,255,255,.66);font-size:14px;max-width:46ch;line-height:1.6}
+.src-title{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:700;margin-bottom:14px}
+.src-list{list-style:none;font-size:13px;color:rgba(255,255,255,.7);line-height:1.5}
+.src-list li{padding:6px 0;border-top:1px solid rgba(255,255,255,.08)}
+.src-list li:first-child{border-top:none}
+.foot-bottom{max-width:var(--maxw);margin:0 auto;padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12.5px;color:rgba(255,255,255,.5)}
+.foot-bottom a{color:rgba(255,255,255,.8);text-decoration:none}
+.foot-bottom a:hover{color:#fff}
+
+.divider-num{font-family:var(--serif);font-size:clamp(64px,12vw,140px);font-weight:700;color:var(--crimson);opacity:.1;line-height:.8;position:absolute;top:clamp(30px,5vw,60px);right:clamp(18px,5vw,50px);pointer-events:none;z-index:0}
+.alt-bg{background:var(--paper-warm)}
+.dark-bg{background:#19161700}
+.note-src{font-size:12px;color:var(--gray-light);margin-top:18px;font-style:italic}
+
+/* ---------- Logo ---------- */
+.brand{padding:2px 0}
+.logo-c{height:30px;width:auto;display:block}
+.logo-f{height:46px;width:auto;display:block}
+.foot-logo{margin-bottom:16px}
+@media(max-width:560px){.logo-c{height:26px}}
+
+/* ---------- Criteria explainer ---------- */
+.crit{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:760px){.crit{grid-template-columns:1fr}}
+.crit .c{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:24px;border-top:3px solid var(--crimson)}
+.crit .c .h{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--crimson);margin-bottom:9px}
+.crit .c .t{font-size:14.5px;color:var(--ink-soft);line-height:1.6}
+.crit .c .t b{color:var(--ink)}
+
+/* ---------- Stages (etapele) ---------- */
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
+@media(max-width:860px){.stages{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.stages{grid-template-columns:1fr}}
+.stage{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px 22px;position:relative;transition:transform .3s,box-shadow .3s}
+.stage:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.stage .n{font-family:var(--serif);font-weight:700;font-size:15px;color:#fff;background:var(--crimson);width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.stage h5{font-size:15.5px;font-weight:700;margin-bottom:9px;line-height:1.3}
+.stage p{font-size:13.5px;color:var(--gray);line-height:1.55}
+
+/* ---------- Why-box (finance rationale) ---------- */
+.whybox{margin-top:24px;background:var(--ink);border-radius:18px;padding:30px;color:#fff}
+.whybox .h{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:18px}
+.whybox .ctx{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+@media(max-width:680px){.whybox .ctx{grid-template-columns:1fr}}
+.whybox .ctx .s{background:rgba(255,255,255,.06);border-radius:12px;padding:18px}
+.whybox .ctx .s .n{font-family:var(--serif);font-weight:700;font-size:23px;color:#f0a8b3;line-height:1.05}
+.whybox .ctx .s .l{font-size:13px;color:rgba(255,255,255,.7);margin-top:8px;line-height:1.45}
+.whybox p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.6}
+.whybox p b{color:#fff}
+
+/* ---------- Avantaje ---------- */
+.adv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+@media(max-width:860px){.adv{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.adv{grid-template-columns:1fr}}
+.adv .a{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.adv .a:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--line-strong)}
+.adv .a .ic{width:44px;height:44px;border-radius:12px;background:var(--crimson-tint);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.adv .a .ic svg{width:23px;height:23px;stroke:var(--crimson);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.adv .a h5{font-size:16px;font-weight:700;margin-bottom:8px}
+.adv .a p{font-size:14px;color:var(--ink-soft);line-height:1.55}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav id="nav">
+  <a href="#top" class="brand" aria-label="Expert-Grup — Acasă"><svg class="logo-c" viewBox="0 0 585 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expert-Grup"><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M22,98 L22,40 L75,12 L128,40" stroke="#BF1F3A"/><path d="M22,40 L75,55" stroke="#BF1F3A"/><path d="M128,40 L128,98 L75,126 L22,98" stroke="#2B2627"/><path d="M75,55 L128,40" stroke="#2B2627"/><path d="M75,55 L75,126" stroke="#2B2627"/></g><text x="172" y="92" font-family="Inter,sans-serif" font-weight="800" font-size="60" fill="#BF1F3A" letter-spacing="-1.5">Expert-Grup</text></svg></a>
+  <button class="menu-btn" id="menuBtn" aria-label="Meniu">≡</button>
+  <div class="navlinks" id="navlinks">
+    <a href="#context">Context</a>
+    <a href="#diagnostic">Diagnostic</a>
+    <a href="#cifre">Cifre</a>
+    <a href="#viziune">Viziune</a>
+    <a href="#holding">Holding</a>
+    <a href="#parcurs">Foaie de parcurs</a>
+  </div>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-tag reveal visible"><span class="dot"></span> Reforma administrării proprietății publice · Expert-Grup · 2026</div>
+    <h1 class="reveal visible d1">Reorganizarea Agenției <span class="hl">Proprietății Publice</span></h1>
+    <p class="hero-sub reveal visible d2">De la constrângeri cronice de capacitate la o administrare corporativă performantă a proprietății statului și o deetatizare predictibilă.</p>
+    <div class="hero-meta reveal visible d3">
+      <div class="item"><b>Fundament analitic</b>Analiza alinierii funcționale a structurii organizatorice a APP (Expert-Grup, 2023)</div>
+      <div class="item"><b>Instrument de politici</b>Nota de concept privind reorganizarea APP</div>
+      <div class="item"><b>Cadru strategic</b>Strategia de proprietate a statului 2023–2030</div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Derulează</span><span class="mouse"></span></div>
+</header>
+
+<!-- ===================== CONTEXT ===================== -->
+<section id="context">
+  <span class="divider-num">01</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Context · De ce acum</div>
+    <h2 class="section-title reveal d1">O restanță de reformă, asumată prin Strategia de proprietate</h2>
+    <p class="lead reveal d2">Decizia de a concentra funcția de proprietar în cadrul APP a fost luată în 2017, dar nu a fost însoțită, în timp util, de capacitarea instituției. Reorganizările ulterioare au modificat structura fără o analiză funcțională care să arate ce limitări trebuie corectate.</p>
+
+    <div class="grid g3" style="margin-top:48px">
+      <div class="card reveal"><div class="statnum" data-count="2" data-suffix="">0</div><div class="statlabel">reorganizări succesive (2019, 2020), niciuna precedată de o analiză funcțională a structurii</div></div>
+      <div class="card reveal d1"><div class="statnum" data-count="67" data-suffix="%">0</div><div class="statlabel">grad de ocupare a funcțiilor în cadrul agenției, cu un singur auditor intern</div></div>
+      <div class="card reveal d2"><div class="statnum" data-count="2030" data-raw="1">0</div><div class="statlabel">orizontul Strategiei de proprietate a statului, care cere fortificarea capacităților APP</div></div>
+    </div>
+
+    <div class="timeline reveal d2">
+      <div class="tl-track"></div>
+      <div class="tl-item"><div class="yr"></div><div class="y">2017</div><div class="t">Centralizarea funcției de proprietar al statului în cadrul APP, fără capacitarea corespunzătoare a instituției.</div></div>
+      <div class="tl-item"><div class="yr"></div><div class="y">2019</div><div class="t">Prima reorganizare: schema de personal crește de la 52 la 99 de unități, fără analiză funcțională.</div></div>
+      <div class="tl-item"><div class="yr"></div><div class="y">2020</div><div class="t">A doua reorganizare a structurii, din nou fără un diagnostic al limitărilor de corectat.</div></div>
+      <div class="tl-item"><div class="yr"></div><div class="y">2022</div><div class="t">FMI semnalează un mandat prea extins pentru capacitatea disponibilă a agenției.</div></div>
+      <div class="tl-item accent"><div class="yr"></div><div class="y">2023</div><div class="t">Strategia de proprietate (HG nr. 911/2022) readuce reforma pe agendă: obiectivul specific 2.2 cere fortificarea capacităților APP prin practici manageriale corporative.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TENSIUNEA DE FOND ===================== -->
+<section class="alt-bg" id="tensiune">
+  <div class="wrap">
+    <div class="eyebrow reveal">Tensiunea de fond</div>
+    <h2 class="section-title reveal d1">Un mandat extins, pe fundalul unei capacități cronic insuficiente</h2>
+    <p class="lead reveal d2">APP exercită rolul statului de proprietar peste sute de întreprinderi și un patrimoniu de zeci de miliarde de lei, însă o face cu o structură proiectată ca a unui minister și cu resurse umane sub necesar.</p>
+    <div class="compare reveal d2" style="margin-top:40px">
+      <div class="col ask">
+        <h4>Ce i se cere agenției</h4>
+        <ul>
+          <li>Evidența și protecția patrimoniului public al statului</li>
+          <li>Administrarea corporativă a întreprinderilor de stat</li>
+          <li>Privatizarea, concesiunile și parteneriatele public-private</li>
+          <li>Transpunerea Strategiei de proprietate 2023–2030</li>
+        </ul>
+      </div>
+      <div class="col limit">
+        <h4>Ce o limitează în practică</h4>
+        <ul>
+          <li>Doar 67% din funcții ocupate; salarii sub nivelul ministerelor</li>
+          <li>Un singur auditor intern pentru toate procesele critice</li>
+          <li>Registre ținute manual, fără sistem informațional integrat</li>
+          <li>Resurse absorbite de micromanagement cu valoare contestabilă</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DIAGNOSTIC ===================== -->
+<section id="diagnostic">
+  <span class="divider-num">02</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Partea 02 · Diagnosticul</div>
+    <h2 class="section-title reveal d1">Opt constrângeri structurale care țin agenția sub potențialul ei</h2>
+    <p class="lead reveal d2">Analiza funcțională suprapune cerințele impuse de cadrul normativ peste parametrii reali de design organizațional și măsoară decalajele, pe cele patru arii funcționale ale agenției. Apasă pe fiecare constrângere pentru a vedea constatările și implicația.</p>
+
+    <div class="diag-head reveal d2" style="margin-top:40px">
+      <div class="kicker">25 de constatări documentate · 8 constrângeri · 4 arii funcționale</div>
+      <button class="toggle-all" id="toggleAll">Extinde toate</button>
+    </div>
+
+    <div class="diag-grid" id="diagGrid">
+      <!-- 1 -->
+      <div class="diag reveal">
+        <button class="diag-btn"><span class="diag-no">01</span><span class="diag-main"><span class="diag-cat">Capacitate</span><span class="diag-title">Copleșită de operațional, agenția nu ajunge la planificarea strategică</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <div class="diag-metric">0 Planuri de Dezvoltare Strategică elaborate</div>
+          <p class="diag-desc">Absorbită de activități curente cu valoare adăugată contestabilă, APP nu reușește să aloce timp planificării, deși legea i-o cere.</p>
+          <ul class="diag-points">
+            <li><b>Fără Plan de Dezvoltare Strategică.</b> Agenția cere planificare pe termen mediu de la entitățile administrate, dar nu dispune de propriul PDS.</li>
+            <li><b>Lipsește analiza de capacitate.</b> PDS-ul ar trebui să cuprindă o evaluare a capacității de realizare a misiunii, inexistentă în prezent.</li>
+            <li><b>Gravitație organizațională dezechilibrată.</b> Resursele se scurg către sarcini mărunte, în detrimentul funcțiilor de bază.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>O instituție care nu-și planifică propria dezvoltare nu poate impune disciplină strategică întreprinderilor pe care le administrează.</p></div>
+        </div></div>
+      </div>
+      <!-- 2 -->
+      <div class="diag reveal d1">
+        <button class="diag-btn"><span class="diag-no">02</span><span class="diag-main"><span class="diag-cat">Design funcțional</span><span class="diag-title">Designul organizațional nu acoperă toate cerințele funcționale</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <p class="diag-desc">Unele cerințe sunt acoperite doar formal, iar cele introduse de Strategia de proprietate nu se regăsesc deloc în parametrii de design.</p>
+          <ul class="diag-points">
+            <li><b>Acoperire formală.</b> Funcții prevăzute de cadrul normativ apar pe hârtie, fără resurse sau procese care să le susțină.</li>
+            <li><b>Strategia, netranspusă.</b> Cerințele funcționale din HG nr. 911/2022 nu sunt reflectate în structura agenției.</li>
+            <li><b>Decalaje nedocumentate.</b> Modificările din 2019 și 2020 nu au fost precedate de o analiză a limitărilor de corectat.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>Fără transpunerea cerințelor în structură, Strategia de proprietate rămâne un document de politici lipsit de instrumentul instituțional care s-o aplice.</p></div>
+        </div></div>
+      </div>
+      <!-- 3 -->
+      <div class="diag reveal">
+        <button class="diag-btn"><span class="diag-no">03</span><span class="diag-main"><span class="diag-cat">Structură & subordonare</span><span class="diag-title">O structură de minister și o subordonare instituțională neconformă</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <p class="diag-desc">Structura APP reproduce designul tipic unui minister, deși are altă menire, iar subordonarea directă către Guvern nu respectă principiile de organizare a administrației centrale.</p>
+          <ul class="diag-points">
+            <li><b>Design ministerial.</b> Arhitectura reflectă un minister de elaborare a politicilor, nu o agenție de administrare a proprietății.</li>
+            <li><b>Subordonare greșită.</b> Ca agenție de implementare, APP ar trebui subordonată funcțional MDED, nu direct Guvernului prin Cancelaria de Stat.</li>
+            <li><b>Confuzie de rol.</b> Subordonarea directă la Guvern se justifică doar în lipsa unui minister de resort, ceea ce nu este cazul.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>Subordonarea actuală amplifică presiunea politică asupra conducerii și estompează linia dintre elaborarea politicii de proprietate și implementarea ei.</p></div>
+        </div></div>
+      </div>
+      <!-- 4 -->
+      <div class="diag reveal d1">
+        <button class="diag-btn"><span class="diag-no">04</span><span class="diag-main"><span class="diag-cat">Guvernanță</span><span class="diag-title">Standarde de guvernanță cerute altora, dar neaplicate sieși</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <p class="diag-desc">Agenția revendică standarde înalte de guvernanță corporativă de la entitățile administrate, însă nu le transpune în propria arhitectură organizațională.</p>
+          <ul class="diag-points">
+            <li><b>Fără Consiliu de Supraveghere.</b> Lipsește un organ colegial cu membri independenți și reprezentanți ai entităților administrate.</li>
+            <li><b>Politizare.</b> Directorul general și locțiitorii sunt numiți de Guvern, iar funcția are statut de demnitate publică.</li>
+            <li><b>Fără fond de remunerare.</b> Nu există un fond care să securizeze partea fixă a remunerării organelor de conducere ale ÎS.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>O agenție care nu se guvernează ea însăși corporativ pierde autoritatea, morală și practică, de a impune buna guvernanță companiilor de stat.</p></div>
+        </div></div>
+      </div>
+      <!-- 5 -->
+      <div class="diag reveal">
+        <button class="diag-btn"><span class="diag-no">05</span><span class="diag-main"><span class="diag-cat">Evidență & digitalizare</span><span class="diag-title">Evidența patrimoniului, blocată în registre ținute manual</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <div class="diag-metric">≈15% din resursa om/oră pierdută</div>
+          <p class="diag-desc">Registrul Patrimoniului Public și majoritatea celorlalte registre sunt ținute manual, fără o soluție informațională integrată și fără acces structurat la date.</p>
+          <ul class="diag-points">
+            <li><b>RPP manual.</b> Ținerea manuală exercită o presiune administrativă disproporționată pe direcția de evidență (DEMPP).</li>
+            <li><b>Conflict de control.</b> Aceiași angajați țin și controlează ținerea registrului, ceea ce viciază controlul intern.</li>
+            <li><b>Funcții îmbinate.</b> Consolidarea și valorificarea terenurilor sunt comasate, defocusând Programul de delimitare.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>Aproximativ 15% din timpul de lucru se irosește pe procese manuale care ar putea fi realocate funcțiilor critice ale agenției.</p></div>
+        </div></div>
+      </div>
+      <!-- 6 -->
+      <div class="diag reveal d1">
+        <button class="diag-btn"><span class="diag-no">06</span><span class="diag-main"><span class="diag-cat">Administrare corporativă</span><span class="diag-title">Administrarea corporativă, prinsă în micromanagement</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <p class="diag-desc">Funcția de administrare corporativă este realizată prin două direcții cu mandate suprapuse, copleșite de avizări mărunte în locul guvernanței reale.</p>
+          <ul class="diag-points">
+            <li><b>Mandate suprapuse.</b> DPAE și DACMR au dependențe critice una față de cealaltă și pasează responsabilitatea proceselor-cheie.</li>
+            <li><b>Micromanagement.</b> Autorizarea deplasărilor, a casărilor, a achizițiilor peste 400 mii lei și a împrumuturilor consumă resursa.</li>
+            <li><b>Guvernanță neglijată.</b> Nu mai rămân resurse pentru evaluarea și controlul organelor de conducere ale companiilor de stat.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>Statul-proprietar ajunge să verifice detalii contabile în loc să se comporte ca un acționar care cere performanță consiliilor și directorilor.</p></div>
+        </div></div>
+      </div>
+      <!-- 7 -->
+      <div class="diag reveal">
+        <button class="diag-btn"><span class="diag-no">07</span><span class="diag-main"><span class="diag-cat">Valorificare</span><span class="diag-title">Valorificarea, organizată pe tipul activului, nu pe instrument</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <p class="diag-desc">Structura tratează valorificarea în funcție de tipul bunului, ceea ce dispersează aceleași competențe în mai multe direcții și le pune în concurență cu alte activități.</p>
+          <ul class="diag-points">
+            <li><b>Logică greșită.</b> Competențele necesare depind de instrumentul de valorificare (locațiune, concesiune, PPP, privatizare), nu de specificul activului.</li>
+            <li><b>Competențe duplicate.</b> Același set de abilități se dezvoltă, fragmentat, în mai multe unități specializate.</li>
+            <li><b>Monitorizare subevaluată.</b> La instrumentele complexe, urmărirea contractelor pe termen lung nu este reflectată în design.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>Fără specializare pe instrument, valorificarea rămâne lentă și impredictibilă, exact opusul deetatizării eficiente pe care o cere Strategia de proprietate.</p></div>
+        </div></div>
+      </div>
+      <!-- 8 -->
+      <div class="diag reveal d1">
+        <button class="diag-btn"><span class="diag-no">08</span><span class="diag-main"><span class="diag-cat">Suport & resurse umane</span><span class="diag-title">Funcții de suport dispersate și un deficit de personal greu de acoperit</span></span><span class="diag-chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+        <div class="diag-body"><div class="diag-body-inner">
+          <div class="diag-metric">67% grad de ocupare · 1 singur auditor intern</div>
+          <p class="diag-desc">Activitățile de suport sunt răzlețe și nu tratează unitățile specializate drept clienți interni, în timp ce remunerarea și competențele nu permit atragerea specialiștilor.</p>
+          <ul class="diag-points">
+            <li><b>Suport fragmentat.</b> Funcțiile de suport sunt împrăștiate în subunități autonome, fără un sistem unic de sprijin.</li>
+            <li><b>Salarii necompetitive.</b> Remunerarea este sub nivelul ministerelor și al pieței private pentru sarcini de complexitate similară.</li>
+            <li><b>Fără instruiri-cheie.</b> Lipsesc formările în QGIS, analiză economico-financiară sau certificarea internațională în PPP.</li>
+          </ul>
+          <div class="diag-impl"><div class="lbl">Implicație</div><p>Cu două treimi din posturi ocupate și un singur auditor, agenția nu poate audita sistematic procesele critice și pierde specialiștii pe care îi formează.</p></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PULL QUOTE ===================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="pullquote reveal">
+      <div class="mark">”</div>
+      <p>Toate constatările converg către o singură concluzie: structura nu mai corespunde mandatului.</p>
+      <div class="src">Sinteza analizei funcționale · Expert-Grup, 2023</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CIFRE / IMPLICAȚII ===================== -->
+<section class="alt-bg" id="cifre">
+  <span class="divider-num">03</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Partea 03 · Implicațiile pentru stat</div>
+    <h2 class="section-title reveal d1">Un sector volatil, care alunecă în pierdere</h2>
+    <p class="lead reveal d2">Rezultatul financiar net agregat al întreprinderilor analizate a oscilat puternic și a redevenit negativ în 2022, în pofida unei cifre de afaceri în creștere accelerată. Concentrarea activelor în câteva întreprinderi schimbă logica reorganizării și a finanțării viitorului holding.</p>
+
+    <div class="statband reveal d2" style="margin-top:44px">
+      <div class="cell"><div class="statnum" data-count="65.9" data-decimals="1"><span class="u"> mld. lei</span></div><div class="statlabel">active totale ale întreprinderilor analizate (2022)</div></div>
+      <div class="cell"><div class="statnum" data-count="2.6" data-decimals="1" data-suffix="×">0</div><div class="statlabel">creșterea cifrei de afaceri agregate în doar doi ani (2020–2022)</div></div>
+      <div class="cell"><div class="statnum"><span style="color:#fff">−</span><span data-count="980">0</span><span class="u"> mil. lei</span></div><div class="statlabel">pierderi cumulate ale celor 20 de întreprinderi cu rezultat negativ (2022)</div></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:24px">
+      <div class="chart-card reveal">
+        <h4>Cifra de afaceri agregată</h4>
+        <div class="sub">Venitul din vânzări, miliarde lei · 2020–2022</div>
+        <div class="barchart" id="chartRev">
+          <div class="col"><div class="bar" data-h="32"><span class="v">16,4</span></div><div class="lab">2020</div></div>
+          <div class="col"><div class="bar" data-h="43"><span class="v">22,0</span></div><div class="lab">2021</div></div>
+          <div class="col"><div class="bar" data-h="84"><span class="v">42,9</span></div><div class="lab">2022</div></div>
+        </div>
+      </div>
+      <div class="chart-card reveal d1">
+        <h4>Rezultatul financiar net agregat</h4>
+        <div class="sub">Milioane lei · 2020–2022 · linia zero marcată</div>
+        <div class="dchart" id="chartNet">
+          <div class="zeroline"><span>0</span></div>
+          <div class="col"><div class="pos"></div><div class="neg"><div class="bar down" data-h="78" title="−910 mil. lei"></div><div class="v down">−910</div></div><div class="lab">2020</div></div>
+          <div class="col"><div class="pos"><div class="v up">+51</div><div class="bar up" data-h="9" title="+51 mil. lei"></div></div><div class="neg"></div><div class="lab">2021</div></div>
+          <div class="col"><div class="pos"></div><div class="neg"><div class="bar down" data-h="44" title="−513 mil. lei"></div><div class="v down">−513</div></div><div class="lab">2022</div></div>
+        </div>
+        <p class="note-src" style="margin-top:14px">Pozitiv în 2021, negativ din nou în 2022 — semn al unei volatilități structurale.</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:24px">
+      <div class="chart-card reveal">
+        <h4>Întreprinderi profitabile vs. cu pierderi</h4>
+        <div class="sub">Din cele 71 de întreprinderi analizate · 2022</div>
+        <div class="splitbar" id="splitBar">
+          <div class="seg profit" data-flex="41"><span>41</span></div>
+          <div class="seg loss" data-flex="20"><span>20</span></div>
+        </div>
+        <div class="legend">
+          <div class="li"><span class="sw" style="background:#27604f"></span> 41 cu profit net</div>
+          <div class="li"><span class="sw" style="background:var(--crimson)"></span> 20 cu pierderi nete</div>
+        </div>
+        <p class="note-src">Cele 20 de întreprinderi cu pierderi au cumulat circa −980 mil. lei în 2022.</p>
+      </div>
+      <div class="chart-card reveal d1">
+        <h4>Concentrarea activelor</h4>
+        <div class="sub">Portofoliul este dominat de infrastructură</div>
+        <div class="conc">
+          <div class="conc-row"><div class="top"><span>Primele 3 întreprinderi din totalul activelor</span><b data-count="68" data-suffix="%">0</b></div><div class="conc-track"><div class="conc-fill" data-w="68"></div></div></div>
+          <div class="conc-row"><div class="top"><span>Drumuri publice din activele nepasibile privatizării</span><b data-count="40" data-suffix="%">0</b></div><div class="conc-track"><div class="conc-fill" data-w="40"></div></div></div>
+        </div>
+        <p class="note-src">≈40% din activele nepasibile privatizării sunt drumuri administrate de Î.S. „Administrația de Stat a Drumurilor”, ceea ce cere o supraveghere diferențiată.</p>
+      </div>
+    </div>
+    <p class="note-src reveal" style="margin-top:8px">Sursa: calcule Expert-Grup pe baza indicatorilor financiari ai întreprinderilor din categoria 1 (2020–2022).</p>
+
+    <h3 class="reveal" style="font-family:var(--serif);font-weight:600;font-size:clamp(20px,2.8vw,28px);margin:60px 0 8px">Costul, măsurabil, al menținerii structurii actuale</h3>
+    <div class="grid g4" style="margin-top:22px">
+      <div class="card reveal"><div class="kicker" style="color:var(--crimson);margin-bottom:10px">Credibilitate erodată</div><p style="font-size:14px;color:var(--ink-soft)">Statul nu poate pretinde companiilor o guvernanță pe care administratorul lor, APP, nu o practică el însuși.</p></div>
+      <div class="card reveal d1"><div class="kicker" style="color:var(--crimson);margin-bottom:10px">Deetatizare întârziată</div><p style="font-size:14px;color:var(--ink-soft)">Valorificarea organizată greșit și capacitatea redusă încetinesc privatizarea și concesiunile cerute de Strategie.</p></div>
+      <div class="card reveal d2"><div class="kicker" style="color:var(--crimson);margin-bottom:10px">Risc fiscal</div><p style="font-size:14px;color:var(--ink-soft)">Pierderi de circa 980 mil. lei în 2022 și datorii pe termen lung în creștere apasă sustenabilitatea sectorului.</p></div>
+      <div class="card reveal d3"><div class="kicker" style="color:var(--crimson);margin-bottom:10px">Resurse irosite</div><p style="font-size:14px;color:var(--ink-soft)">Aproape 15% din timpul de lucru se pierde pe procese manuale, iar specialiștii formați părăsesc agenția.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VIZIUNE ===================== -->
+<section id="viziune">
+  <span class="divider-num">04</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Partea 04 · Viziunea de reorganizare</div>
+    <h2 class="section-title reveal d1">O triere, două instituții, un singur obiectiv</h2>
+    <p class="lead reveal d2">Toate întreprinderile cu capital de stat sunt trecute printr-o triere pe criterii de privatizabilitate. În funcție de rezultat, ele se împart între o societate de tip holding, dedicată administrării corporative, și o APP fortificată, concentrată pe deetatizare și valorificare.</p>
+
+    <div class="triage reveal d2">
+      <div class="triage-top">
+        <div class="triage-pill">
+          <div class="t">Întreprinderile cu capital de stat</div>
+          <div class="s">trecute printr-o triere pe criterii de privatizabilitate</div>
+        </div>
+      </div>
+      <div class="triage-split">
+        <span class="branch l"></span><span class="hbar"></span><span class="branch r"></span>
+      </div>
+      <div class="two-inst">
+        <div class="inst holding">
+          <div class="badge">68</div>
+          <div class="grp">Grupa 1 → Holding de stat</div>
+          <div class="nm">Administrare corporativă profesionistă</div>
+          <div class="blk"><div class="h">Ce cuprinde</div><p>Întreprinderi nepasibile privatizării sau privatizabile doar pe termen lung — circa 68 de întreprinderi.</p></div>
+          <div class="blk"><div class="h">Ce se întâmplă</div><p>Trec în administrarea corporativă a unei societăți de tip holding, cu capital de stat, pentru o conducere profesionistă prin consilii independente.</p></div>
+        </div>
+        <div class="inst app">
+          <div class="badge" style="color:var(--crimson)">APP</div>
+          <div class="grp">Grupa 2 → APP fortificată</div>
+          <div class="nm">Deetatizare și valorificare</div>
+          <div class="blk"><div class="h">Ce cuprinde</div><p>Întreprinderi pasibile privatizării, restructurării sau lichidării.</p></div>
+          <div class="blk"><div class="h">Ce se întâmplă</div><p>Rămân la APP, care își consolidează funcțiile de privatizare, concesiuni, parteneriate și valorificare a patrimoniului public.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="crit reveal d2">
+      <div class="c">
+        <div class="h">Grupa 1 · criteriul includerii</div>
+        <div class="t"><b>Întreprinderi nepasibile privatizării</b> — incluse în lista bunurilor nepasibile privatizării (anexa nr. 1 la Legea nr. 121/2007) — sau pasibile privatizării <b>doar pe termen lung</b>. Sunt excluse din administrarea corporativă a APP și transmise în administrarea Holdingului.</div>
+      </div>
+      <div class="c">
+        <div class="h">Grupa 2 · criteriul includerii</div>
+        <div class="t"><b>Întreprinderi pasibile privatizării, restructurării sau lichidării.</b> Rămân la APP, care le pregătește pentru deetatizare și execută celelalte funcții de realizare a politicii statului în administrarea și deetatizarea proprietății publice.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOLDING ===================== -->
+<section class="alt-bg" id="holding">
+  <div class="wrap">
+    <div class="eyebrow reveal">Viziune · Holdingul de stat</div>
+    <h2 class="section-title reveal d1">O întreprindere-mamă guvernată corporativ</h2>
+    <p class="lead reveal d2">Holdingul de stat preia rolul de proprietar pentru întreprinderile strategice și se finanțează din serviciile de administrare prestate, fără presiune permanentă pe bugetul de stat.</p>
+
+    <div class="model reveal d2" style="margin-top:40px">
+      <div class="spec-list">
+        <div class="spec"><div class="h">Formă juridică</div><div class="v">Societate pe acțiuni, <b>100% stat</b>, cu posibil IPO ulterior</div></div>
+        <div class="spec"><div class="h">Constituire</div><div class="v">Hotărâre de Guvern; <b>APP</b> exercită funcția de fondator</div></div>
+        <div class="spec"><div class="h">Guvernanță</div><div class="v">Consiliu de <b>7</b> membri independenți; Comitet de conducere de <b>3</b> membri</div></div>
+        <div class="spec"><div class="h">Portofoliu</div><div class="v">Întreprindere-mamă pentru circa <b>68</b> de întreprinderi</div></div>
+        <div class="spec"><div class="h">Personal</div><div class="v">Circa <b>30</b> de specialiști, plus <b>3</b> în conducere</div></div>
+        <div class="spec"><div class="h">Repartizarea profitului</div><div class="v">Decisă de fondator pentru <b>maximizarea</b> beneficiului pe termen lung</div></div>
+      </div>
+      <div class="finbox">
+        <div class="h">Modelul de finanțare · indicator combinat</div>
+        <div class="formula">
+          <div class="term"><div class="p">5%</div><div class="l">din profitul net</div></div>
+          <div class="op">+</div>
+          <div class="term"><div class="p">0,05%</div><div class="l">din activele medii</div></div>
+          <div class="op">+</div>
+          <div class="term"><div class="p">0,05%</div><div class="l">din venitul din vânzări</div></div>
+        </div>
+        <div class="vs">
+          <div class="vbox in"><div class="n">≈ 55–64</div><div class="l">mil. lei/an · venituri estimate</div></div>
+          <div class="vbox out"><div class="n">≈ 40–45</div><div class="l">mil. lei/an · cheltuieli estimate</div></div>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,.6);margin-top:18px;line-height:1.5">Veniturile provin din plățile lunare ale întreprinderilor administrate. Un indicator combinat diminuează volatilitatea, întrucât holdingul prestează servicii și pentru întreprinderi care generează pierderi.</p>
+      </div>
+    </div>
+
+    <div class="whybox reveal d2">
+      <div class="h">De ce un indicator combinat și un capital inițial</div>
+      <div class="ctx">
+        <div class="s"><div class="n">39 din 68</div><div class="l">întreprinderi cu profit net mediu de ≈ 373 mil. lei/an (2020–2022)</div></div>
+        <div class="s"><div class="n">23 din 68</div><div class="l">întreprinderi cu pierderi nete medii de ≈ 830 mil. lei/an</div></div>
+        <div class="s"><div class="n">≈ 40%</div><div class="l">din active sunt drumuri publice administrate de Î.S. „Administrația de Stat a Drumurilor"</div></div>
+      </div>
+      <p>Întrucât portofoliul cuprinde atât întreprinderi profitabile, cât și generatoare de pierderi, finanțarea exclusiv din profit ar fi prea volatilă. De aceea referința combină <b>profitul, activele medii și venitul din vânzări</b>, asigurând plăți proporționale cu serviciile prestate. La incorporare, statul aportează un <b>capital inițial care acoperă înființarea și ≈ 18 luni de activitate</b>, până când Holdingul se autofinanțează din serviciile de management.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ETAPELE CREĂRII HOLDINGULUI ===================== -->
+<section id="etape">
+  <div class="wrap">
+    <div class="eyebrow reveal">Viziune · Cum se construiește</div>
+    <h2 class="section-title reveal d1">Patru etape pentru crearea Holdingului de stat</h2>
+    <p class="lead reveal d2">Constituirea Holdingului presupune o analiză ex-ante a modului de activitate, cu atenție la capitalul inițial, la necesarul anual de resurse și la sursele de finanțare.</p>
+    <div class="stages reveal d2">
+      <div class="stage"><div class="n">1</div><h5>Capitalul inițial</h5><p>Determinarea capitalului social pentru dotarea tehnică, IT și mobilier, plus cheltuielile operaționale pentru cel puțin 1,5 ani — până la autofinanțarea din serviciile de management.</p></div>
+      <div class="stage"><div class="n">2</div><h5>Cadrul normativ</h5><p>O lege specială privind activitatea Holdingului și modificarea actelor conexe: Legea nr. 121/2007, HG nr. 902/2017, HG nr. 210/2011 și regulamentele de aplicare.</p></div>
+      <div class="stage"><div class="n">3</div><h5>Rolul de întreprindere-mamă</h5><p>Transmiterea de către Guvern, ca aport la capital, a cotelor și acțiunilor în cele ≈ 68 de întreprinderi rezultate din triaj, prin care Holdingul devine proprietar.</p></div>
+      <div class="stage"><div class="n">4</div><h5>Guvernanța corporativă</h5><p>Selectarea prin concurs transparent a Consiliului (7 membri independenți), numirea Comitetului de conducere (3 membri) și angajarea a ≈ 30 de specialiști, plus identificarea sediului.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== APP FORTIFICATĂ ===================== -->
+<section class="alt-bg" id="app-fortificata">
+  <div class="wrap">
+    <div class="eyebrow reveal">Viziune · APP fortificată</div>
+    <h2 class="section-title reveal d1">Eliberată de povara corporativă, APP se concentrează pe valorificare</h2>
+    <p class="lead reveal d2">Odată ce administrarea corporativă trece la Holding, APP își consolidează celelalte funcții delegate prin lege și capătă un model de finanțare care îi permite să rețină specialiști.</p>
+
+    <div class="grid g2" style="margin-top:40px;align-items:start">
+      <div class="card reveal d2" style="padding:30px">
+        <div class="kicker" style="color:var(--crimson);margin-bottom:18px">Funcțiile consolidate</div>
+        <ul style="list-style:none">
+          <li style="padding:13px 0 13px 26px;border-top:1px solid var(--line);position:relative;font-size:15px;color:var(--ink-soft)"><span style="position:absolute;left:0;top:18px;width:10px;height:10px;border:2px solid var(--crimson);border-radius:50%"></span>Administrarea terenurilor proprietate publică a statului</li>
+          <li style="padding:13px 0 13px 26px;border-top:1px solid var(--line);position:relative;font-size:15px;color:var(--ink-soft)"><span style="position:absolute;left:0;top:18px;width:10px;height:10px;border:2px solid var(--crimson);border-radius:50%"></span>Inițierea concesiunilor și a parteneriatelor public-private</li>
+          <li style="padding:13px 0 13px 26px;border-top:1px solid var(--line);position:relative;font-size:15px;color:var(--ink-soft)"><span style="position:absolute;left:0;top:18px;width:10px;height:10px;border:2px solid var(--crimson);border-radius:50%"></span>Privatizarea, restructurarea și lichidarea întreprinderilor</li>
+          <li style="padding:13px 0 13px 26px;border-top:1px solid var(--line);position:relative;font-size:15px;color:var(--ink-soft)"><span style="position:absolute;left:0;top:18px;width:10px;height:10px;border:2px solid var(--crimson);border-radius:50%"></span>Evidența și valorificarea patrimoniului public</li>
+        </ul>
+      </div>
+      <div class="card reveal d3" style="padding:30px;background:var(--ink);color:#fff;border:none">
+        <div class="kicker" style="color:#f0a8b3;margin-bottom:18px">Finanțare după modelul Autorității Aeronautice Civile</div>
+        <p style="font-size:15.5px;color:rgba(255,255,255,.88);line-height:1.6;margin-bottom:20px">Salariu de funcție plus o componentă suplimentară de până la <b style="color:#fff;font-family:var(--serif)">100%</b>, cu premii și adaosuri pentru complexitate, pentru a atrage și menține specialiști.</p>
+        <div style="background:rgba(255,255,255,.06);border-radius:12px;padding:18px">
+          <div class="kicker" style="color:rgba(255,255,255,.55);margin-bottom:6px">Sursa de finanțare</div>
+          <p style="font-size:14px;color:rgba(255,255,255,.82)">Veniturile din valorificarea și înstrăinarea patrimoniului public — fără presiune suplimentară pe bugetul de stat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AVANTAJE ===================== -->
+<section id="avantaje">
+  <div class="wrap">
+    <div class="eyebrow reveal">Viziune · Ce schimbă reforma</div>
+    <h2 class="section-title reveal d1">Ce câștigă statul și companiile</h2>
+    <p class="lead reveal d2">Separarea administrării corporative de deetatizare aliniază structura la mandat și deblochează performanța sectorului întreprinderilor de stat.</p>
+    <div class="adv reveal d2">
+      <div class="a"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h5>Guvernanță depolitizată</h5><p>Consilii independente selectate prin concurs, în locul desemnărilor politice și al interimatelor interminabile la conducerea companiilor de stat.</p></div>
+      <div class="a"><div class="ic"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></div><h5>Performanță economică</h5><p>Administrare profesionistă a întreprinderilor strategice prin consilii, cu obiective de performanță monitorizate cu instrumente moderne.</p></div>
+      <div class="a"><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/></svg></div><h5>Autonomie financiară</h5><p>Holdingul se autofinanțează din serviciile de management, iar APP din valorificarea patrimoniului — fără presiune permanentă pe bugetul de stat.</p></div>
+      <div class="a"><div class="ic"><svg viewBox="0 0 24 24"><polygon points="13 2 4 14 11 14 10 22 20 10 13 10 13 2"/></svg></div><h5>Deetatizare accelerată</h5><p>Eliberată de povara corporativă, APP se concentrează pe privatizări, concesiuni și parteneriate public-private predictibile.</p></div>
+      <div class="a"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div><h5>Transparență față de public</h5><p>Raportarea anuală a rezultatelor administrării corporative și prezentarea, în plenul Parlamentului, a stării patrimoniului public.</p></div>
+      <div class="a"><div class="ic"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 12 12 17 22 12"/><polyline points="2 17 12 22 22 17"/></svg></div><h5>Specializare pe instrument</h5><p>Competențele de valorificare se organizează pe instrument — locațiune, concesiune, PPP, privatizare — nu pe tipul activului.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOAIE DE PARCURS ===================== -->
+<section class="alt-bg" id="parcurs">
+  <span class="divider-num">05</span>
+  <div class="wrap">
+    <div class="eyebrow reveal">Viziune · Foaia de parcurs</div>
+    <h2 class="section-title reveal d1">De la decizia politică la primul raport public</h2>
+    <p class="lead reveal d2">Șase pași leagă decizia de principiu de funcționarea efectivă a noului model și de transparența anuală față de public.</p>
+
+    <div class="road reveal d2">
+      <div class="rd"><div class="top"><div class="n">1</div><div class="line"></div></div><div class="h">Decizie politică</div><div class="d">Asumarea opțiunii de reorganizare a APP și a creării holdingului.</div></div>
+      <div class="rd"><div class="top"><div class="n">2</div><div class="line"></div></div><div class="h">Cadru legal</div><div class="d">Modificarea Legii nr. 121/2007 privind administrarea și deetatizarea.</div></div>
+      <div class="rd"><div class="top"><div class="n">3</div><div class="line"></div></div><div class="h">Organizarea APP</div><div class="d">Hotărâre de Guvern privind organizarea și funcționarea agenției.</div></div>
+      <div class="rd"><div class="top"><div class="n">4</div><div class="line"></div></div><div class="h">Crearea holdingului</div><div class="d">Hotărâre de Guvern și transferul cotelor în întreprinderile nepasibile.</div></div>
+      <div class="rd"><div class="top"><div class="n">5</div><div class="line"></div></div><div class="h">Guvernanța</div><div class="d">Recrutarea consiliului și a executivului; documentele de guvernanță.</div></div>
+      <div class="rd"><div class="top"><div class="n">6</div><div class="line"></div></div><div class="h">Raportare anuală</div><div class="d">Publicarea rezultatelor administrării corporative a portofoliului.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DEZBATERE ===================== -->
+<section id="dezbatere">
+  <div class="wrap">
+    <div class="eyebrow reveal">Mizele reformei</div>
+    <h2 class="section-title reveal d1">Cinci decizii care definesc reforma</h2>
+    <p class="lead reveal d2" style="margin-bottom:8px">Reorganizarea APP depinde de cinci opțiuni de politici publice. Le punem deschis în dezbatere publică, înainte de adoptarea cadrului normativ.</p>
+    <div class="qgrid reveal d2">
+      <div class="q"><div class="qn">1</div><div class="qt"><b>Opțiunea de reorganizare.</b> Confirmăm modelul corporatist pentru APP și crearea unui Holding de stat?</div></div>
+      <div class="q"><div class="qn">2</div><div class="qt"><b>Subordonarea și conducerea.</b> Trecem APP în subordinea MDED și depolitizăm desemnarea conducerii?</div></div>
+      <div class="q"><div class="qn">3</div><div class="qt"><b>Trierea întreprinderilor.</b> Pe ce criterii stabilim lista bunurilor nepasibile privatizării?</div></div>
+      <div class="q"><div class="qn">4</div><div class="qt"><b>Modelul de finanțare.</b> Validăm formula de finanțare a holdingului și capitalul inițial necesar?</div></div>
+      <div class="q" style="grid-column:1/-1"><div class="qn">5</div><div class="qt"><b>Calendarul legislativ.</b> Ce termene fixăm pentru modificarea Legii nr. 121/2007 și actele subsecvente?</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <div class="foot-logo"><svg class="logo-f" viewBox="0 0 670 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expert-Grup · Centru Analitic Independent"><g fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M22,98 L22,40 L75,12 L128,40" stroke="#BF1F3A"/><path d="M22,40 L75,55" stroke="#BF1F3A"/><path d="M128,40 L128,98 L75,126 L22,98" stroke="#FFFFFF"/><path d="M75,55 L128,40" stroke="#FFFFFF"/><path d="M75,55 L75,126" stroke="#FFFFFF"/></g><text x="172" y="74" font-family="Inter,sans-serif" font-weight="800" font-size="60" fill="#FFFFFF" letter-spacing="-1.5">Expert-Grup</text><text x="174" y="116" font-family="Inter,sans-serif" font-weight="700" font-size="29.5" fill="#C9C2C3" letter-spacing="0.3">Centru Analitic Independent</text></svg></div>
+      <p class="fp">Reorganizarea APP transformă o restanță instituțională într-un instrument de bună guvernanță și deetatizare predictibilă. Această viziune de reformă este propusă dezbaterii publice.</p>
+      <p class="fp" style="margin-top:16px">Centrul Analitic Independent Expert-Grup · Str. Vlaicu Pârcălab nr. 3, Chișinău, MD-2009 · <a href="https://www.expert-grup.org" style="color:#f0a8b3;text-decoration:none">expert-grup.org</a></p>
+    </div>
+    <div>
+      <div class="src-title">Surse și fundament analitic</div>
+      <ul class="src-list">
+        <li>Analiza alinierii funcționale a structurii organizatorice a APP (Expert-Grup, 2023)</li>
+        <li>Nota de concept privind reorganizarea Agenției Proprietății Publice</li>
+        <li>Strategia de proprietate a statului 2023–2030 (HG nr. 911/2022)</li>
+        <li>Indicatorii financiari ai întreprinderilor din categoria 1 (2020–2022)</li>
+        <li>Legea nr. 121/2007 privind administrarea și deetatizarea proprietății publice</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Expert-Grup · Infografic realizat în cadrul inițiativei de fortificare a guvernanței corporative a întreprinderilor de stat, cu suportul Fundației Soros Moldova.</span>
+    <span><a href="#top">↑ Sus</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Progress bar
+  var progress=document.getElementById('progress');
+  var nav=document.getElementById('nav');
+  function onScroll(){
+    var h=document.documentElement;
+    var st=h.scrollTop||document.body.scrollTop;
+    var sh=h.scrollHeight-h.clientHeight;
+    progress.style.width=(sh>0?(st/sh*100):0)+'%';
+    nav.classList.toggle('scrolled',st>20);
+    // active nav
+    var secs=document.querySelectorAll('section[id], header[id]');
+    var cur='';
+    secs.forEach(function(s){ if(s.getBoundingClientRect().top<=140) cur=s.id; });
+    document.querySelectorAll('.navlinks a').forEach(function(a){
+      a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  // Mobile menu
+  var mb=document.getElementById('menuBtn'), nl=document.getElementById('navlinks');
+  mb.addEventListener('click',function(){nl.classList.toggle('open');});
+  nl.addEventListener('click',function(e){if(e.target.tagName==='A')nl.classList.remove('open');});
+
+  // Reveal on scroll
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('visible'); animate(en.target); io.unobserve(en.target); }
+    });
+  },{threshold:.18,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+  // Number counters
+  function animate(scope){
+    scope.querySelectorAll('[data-count]').forEach(function(el){
+      if(el.dataset.done)return; el.dataset.done=1;
+      var target=parseFloat(el.dataset.count);
+      var dec=parseInt(el.dataset.decimals||'0',10);
+      var suffix=el.dataset.suffix||'';
+      var raw=el.dataset.raw;
+      var dur=1300, t0=null;
+      function step(ts){
+        if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1);
+        var e=1-Math.pow(1-p,3);
+        var val=target*e;
+        var out= raw ? Math.round(val).toString() : val.toFixed(dec).replace('.',',');
+        el.textContent=out+suffix;
+        if(p<1)requestAnimationFrame(step);
+        else el.textContent=(raw?Math.round(target).toString():target.toFixed(dec).replace('.',','))+suffix;
+      }
+      requestAnimationFrame(step);
+    });
+    // bars
+    scope.querySelectorAll('.bar[data-h]').forEach(function(b){
+      if(b.dataset.done)return;b.dataset.done=1;
+      setTimeout(function(){b.style.height=b.dataset.h+'%';},80);
+    });
+    // split
+    scope.querySelectorAll('.splitbar .seg[data-flex]').forEach(function(s){
+      if(s.dataset.done)return;s.dataset.done=1;
+      setTimeout(function(){s.style.flex=s.dataset.flex;},120);
+    });
+    // concentration fills
+    scope.querySelectorAll('.conc-fill[data-w]').forEach(function(f){
+      if(f.dataset.done)return;f.dataset.done=1;
+      setTimeout(function(){f.style.width=f.dataset.w+'%';},120);
+    });
+  }
+  // For bars/splits inside chart cards (which are .reveal), animate handles them.
+  // Also handle standalone counters in statband (it is .reveal too).
+
+  // Diagnostic expand/collapse
+  var diags=document.querySelectorAll('.diag');
+  diags.forEach(function(d){
+    var btn=d.querySelector('.diag-btn');
+    var body=d.querySelector('.diag-body');
+    btn.addEventListener('click',function(){
+      var open=d.classList.toggle('open');
+      body.style.maxHeight=open?body.scrollHeight+'px':null;
+    });
+  });
+  var toggleAll=document.getElementById('toggleAll');
+  toggleAll.addEventListener('click',function(){
+    var anyClosed=Array.prototype.some.call(diags,function(d){return !d.classList.contains('open');});
+    diags.forEach(function(d){
+      var body=d.querySelector('.diag-body');
+      if(anyClosed){d.classList.add('open');body.style.maxHeight=body.scrollHeight+'px';}
+      else{d.classList.remove('open');body.style.maxHeight=null;}
+    });
+    toggleAll.textContent=anyClosed?'Restrânge toate':'Extinde toate';
+  });
+  // Recompute open panels on resize
+  window.addEventListener('resize',function(){
+    document.querySelectorAll('.diag.open .diag-body').forEach(function(b){b.style.maxHeight=b.scrollHeight+'px';});
+  });
+})();
+</script>
+</body>
+</html>
